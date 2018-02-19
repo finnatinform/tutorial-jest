@@ -3,6 +3,7 @@ import Calculator from './../calculator' ;
 /**
  * TEST DEFINITIONS
  */
+ // Common Matchers
 it('adds 1 + 2 to equal 3',testSum);
 
 
