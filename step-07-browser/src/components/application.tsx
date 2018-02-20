@@ -36,7 +36,7 @@ export class Application extends React.Component<IApplicationProps, IApplication
 
     render() {
         return(
-            <div className="application">
+            <div key="key-application" className="application">
                 {this.renderContent()}
             </div>
         );

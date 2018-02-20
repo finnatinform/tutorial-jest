@@ -15,8 +15,8 @@ export class LoginDialog extends React.Component<ILoginDialogProps, ILoginDialog
                     <div className="login-dialog-header-close ion-close" onClick={this.props.onClose}></div>
                 </div>
                 <div className="login-dialog-content">
-                    <input placeholder="username" />
-                    <input placeholder="password" type="password" />
+                    <input name="username" placeholder="username" />
+                    <input name="password" placeholder="password" type="password" />
                 </div>                
             </div>
         );
