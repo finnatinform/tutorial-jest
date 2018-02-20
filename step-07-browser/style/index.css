@@ -1,0 +1,71 @@
+html,
+body,
+#id-application,
+.application{
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Open Sans', sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.button{
+    padding: 20px;
+    font-size: 1.25em;
+
+    cursor: pointer;
+}
+
+.login-dialog{
+    position: absolute;
+    width: 600px;
+    outline: #ddd solid thin ;
+}
+
+.login-dialog-header{
+    height: 60px;
+    width: 100%;
+}
+.login-dialog-header-title{
+    float: left; 
+    width: calc( 100% - 60px );
+    height: 60px;
+    line-height: 60px;
+    text-indent: 20px;
+}
+.login-dialog-header-close{
+    float: right; 
+    width: 60px;
+    height: 60px;
+
+    font-size: 1.25em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.login-dialog-content{
+    width: calc( 100% - 40px );
+    padding: 20px;
+    padding-top: 0px;
+}
+
+.login-dialog-content > input{
+    margin-top: 20px;
+    width: 100%;
+    border: #ddd solid thin;
+    font-family: inherit;
+    font-style: inherit;
+    height: 40px;
+
+    text-indent: 20px;
+}
