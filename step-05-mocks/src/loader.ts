@@ -1,3 +1,5 @@
+import * as $ from 'jquery' ;
+
 class LoaderClass {
     __Items: Array<String> = [];
 
@@ -7,15 +9,17 @@ class LoaderClass {
     }
 
     public loadData(): void {
-        
+        $.getJSON( 'http://augenhoehe.scheisse.04' )
+            .then( this.onLoadingDataSucceeded )
+            .fail( this.onLoadingDataFailed ) ;
     }
 
     public isOnline(): boolean {
-        return false;
+        return true;
     }
 
     protected onLoadingDataFailed(): void {
-        throw new Error('Data could not be loaded');
+        throw new Error('loading data failed');
     }
 
     protected onLoadingDataSucceeded(_Result: Array<String>): void {
