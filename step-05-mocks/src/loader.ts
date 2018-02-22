@@ -1,4 +1,4 @@
-export default class LoaderClass {
+class LoaderClass {
     __Items: Array<String> = [];
 
     constructor(){
@@ -28,3 +28,6 @@ export default class LoaderClass {
         }
     }
 }
+
+var Loader : LoaderClass = new LoaderClass();
+export = Loader ;

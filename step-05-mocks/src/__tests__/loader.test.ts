@@ -1,6 +1,4 @@
-import Loader from './../loader';
-
-let DataLoader : Loader ;
+import Loader = require('./../loader');
 
 /**
  * TEST DEFINITIONS
@@ -13,15 +11,14 @@ it('should load data', testLoadingData) ;
  * TEST IMPLEMENTATIONS
  */
 function testNotLoadingData():void{
-    DataLoader = new Loader();
-    DataLoader.loadData = jest.fn();
+    Loader.loadData = jest.fn();
 
-    DataLoader.doSomething();
-    expect(DataLoader.loadData).toHaveBeenCalledTimes(0);
+    Loader.doSomething();
+    expect(Loader.loadData).toHaveBeenCalledTimes(0);
 }
 
 function testLoadingData():void{
-    DataLoader = new Loader() ;
+    let DataLoader = require('./../loader');
     DataLoader.loadData = jest.fn();
 
     DataLoader.isOnline = jest.fn().mockReturnValue(true);
