@@ -21,8 +21,11 @@ afterAll(() => {
     HBrowser.close();
 });
 
-test('is openened', async () => {
-    await HPage.goto('file:///E:/GitHub/tutorial-jest/step-07-browser/index.html');
+test('open dialog and type username', testLoginForm,16000)
+
+// Selectors : https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors
+async function testLoginForm():Promise<void>{
+    await HPage.goto('file:///E:/GitHub/tutorial-jest/step-07-browser/target/index.html');
     await HPage.waitForSelector(".application");
     await HPage.click(".button");
     await HPage.waitForSelector(".login-dialog");
@@ -33,15 +36,12 @@ test('is openened', async () => {
     let HTemp = await HInput.getProperty('value');
     let text : string = await HTemp.jsonValue();
 
+    expect(text).toMatch('fzentgra');
+
     await HPage.screenshot(
         {
-            path : text + '.png' ,
+            path : 'screenshot.png' ,
             fullPage : true
         }
-    );
-}, 16000);
-
-// Selectors : https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors
-async function testLoginForm():Promise<void>{
-    
+    ); 
 }
