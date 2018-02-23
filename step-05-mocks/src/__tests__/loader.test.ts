@@ -36,10 +36,12 @@ function testLoadingData():void{
 }
 
 function testSavingData():void{
+
     jest.spyOn(Loader,'loadData').mockImplementation( loadFakeDataSuccess );
     Loader.doSomething();
     expect(Loader.__Items).toEqual([ 'Test1' , 'Test2' ]);
 }
+
 function testFailingLoad():void{
     // Needed for exceptions
     expect.assertions(2);

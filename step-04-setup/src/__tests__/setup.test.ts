@@ -1,5 +1,3 @@
-import Calculator from './../calculator' ;
-
 /**
  * TEST DEFINITIONS
  */
