@@ -9,6 +9,10 @@ Ein möglicher Einsatz ist die Grenze der Applikation, beispielsweise das Laden 
 Dies kann durch einen Mock ersetzt werden, der bestimmte Daten zurückgibt.
 Siehe dazu die loader.ts und die loader.test.ts.
 
+Die Klasse LoaderClass fragt ab, ob die Applikation online ist und lädt dann ggf. Daten.
+
+
+
 ## Mock Implementierungen
 
 ## Mock Matcher

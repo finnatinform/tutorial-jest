@@ -13,7 +13,7 @@ test( 'the data is Borussia Dortmund', testwithAssertions );
 test( 'the data is Borussia Dortmund', testPromises );
 
 // Use Await/Async 
-test( 'the data is Borussia Dortmund', async () => testPromisesWithAsync );
+test( 'the data is Borussia Dortmund', testPromisesWithAsync );
 
 /**
  * TEST IMPLEMENTATIONS
