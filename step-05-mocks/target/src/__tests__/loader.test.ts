@@ -30,7 +30,6 @@ function testNotLoadingData():void{
 function testLoadingData():void{
     jest.spyOn(Loader,'loadData');
 
-    console.log(Loader.isOnline());
     Loader.doSomething();
     expect(Loader.loadData).toHaveBeenCalledTimes(1);
 }
